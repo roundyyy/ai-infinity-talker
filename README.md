@@ -6,9 +6,9 @@ AI Infinity Talker is a desktop application that uses AI to generate endless tex
 
 Watch the demo video on YouTube:
 
-[![AI Infinite Talker Demo](https://img.youtube.com/vi/EmUcYtgWkIY/hqdefault.jpg)](https://youtu.be/EmUcYtgWkIY)
+[![AI Infinite Talker Demo YouTube](https://img.youtube.com/vi/EmUcYtgWkIY/hqdefault.jpg)](https://youtu.be/EmUcYtgWkIY)
 
-Click the thumbnail above to watch the demo.
+
 
 ## Features
 
