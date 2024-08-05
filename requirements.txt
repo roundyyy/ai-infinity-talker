@@ -1,0 +1,6 @@
+ttkbootstrap
+httpx
+nltk
+sounddevice
+requests
+

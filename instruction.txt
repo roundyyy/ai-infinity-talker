@@ -1,0 +1,17 @@
+1. **Find the model name you are interested in**:
+   - Visit the Ollama website or the repository where the models are listed.
+   - Note down the exact name of the model you wish to download.
+
+2. **Open Command Prompt (CMD)**:
+   - Press `Windows + R`, type `cmd`, and hit `Enter` to open the Command Prompt.
+
+3. **Enter the download command**:
+   - In the Command Prompt, type `ollama pull <model-name>` replacing `<model-name>` with the name of the model you noted earlier.
+   - Example: If the model name is `example-model`, you would type `ollama pull example-model`.
+
+4. **Restart the player**:
+   - Once the download is complete, restart the application or player that uses the model to ensure it recognizes the new model.
+
+NOTE. 
+Default Ollama model supports only English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai.
+Text to Speech : English (en), Spanish (es), French (fr), German (de), Italian (it), Portuguese (pt), Polish (pl), Turkish (tr), Russian (ru), Dutch (nl), Czech (cs), Arabic (ar), Chinese (zh-cn), Japanese (ja), Hungarian (hu), Korean (ko) Hindi (hi).
