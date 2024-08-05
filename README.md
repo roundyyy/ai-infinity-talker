@@ -2,6 +2,14 @@
 
 AI Infinity Talker is a desktop application that uses AI to generate endless text based on an initial input and user-defined style options. The generated text is then converted to audio, providing a continuous talking experience. It's like having a chatty friend who never runs out of things to say!
 
+## Demo Video
+
+Watch the demo video on YouTube:
+
+[![AI Infinite Talker Demo](https://img.youtube.com/vi/EmUcYtgWkIY/hqdefault.jpg)](https://youtu.be/EmUcYtgWkIY)
+
+Click the thumbnail above to watch the demo.
+
 ## Features
 
 - **Infinity Text Generation**: Generates continuous text based on initial input and predefined styles.
