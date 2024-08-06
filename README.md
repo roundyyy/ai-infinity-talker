@@ -41,7 +41,7 @@ Watch the demo video on YouTube:
 #### Option 2: Download as Zip (for beginners)
 
 1. **Download the Project**:
-    - Go to the [GitHub repository](https://github.com/roundyy/ai-infinity-talker).
+   
     - Click the green "Code" button and select "Download ZIP".
 
 2. **Unpack the ZIP File**:
