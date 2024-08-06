@@ -22,7 +22,7 @@ Watch the demo video on YouTube:
 ### Prerequisites
 
 - **NVIDIA GPU**: Required. A 8GB GPU should work, but an 12GB GPU is recommended for best results. Trust us, you don't want your AI buddy running out of breath!
-- **Ollama**: Must be installed manually. [Ollama Installation Guide](https://www.ollama.ai/docs/installation)
+- **Ollama**: Must be installed manually. [Ollama Installation Guide](https://ollama.com/download/windows)
 
 ### Steps
 
@@ -30,7 +30,7 @@ Watch the demo video on YouTube:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/ai-infinity-talker.git
+    git clone https://github.com/roundyyy/ai-infinity-talker.git
     cd ai-infinity-talker
     ```
 
@@ -41,7 +41,7 @@ Watch the demo video on YouTube:
 #### Option 2: Download as Zip (for beginners)
 
 1. **Download the Project**:
-    - Go to the [GitHub repository](https://github.com/yourusername/ai-infinity-talker).
+    - Go to the [GitHub repository](https://github.com/roundyy/ai-infinity-talker).
     - Click the green "Code" button and select "Download ZIP".
 
 2. **Unpack the ZIP File**:
