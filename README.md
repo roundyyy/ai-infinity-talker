@@ -33,7 +33,7 @@ Watch the demo video on YouTube:
 
 4. **Run the Installation Script**:
     - Open the extracted folder.
-    - Double-click `start.bat`. This will automatically install all required dependencies and start the application.
+    - Double-click `start.bat`. This will automatically install all required dependencies (have a coffee, it will download about 8GB of libraries and models) and start the application.
 
 ## Usage
 
