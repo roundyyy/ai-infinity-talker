@@ -1,5 +1,17 @@
 @echo off
 
+:: Check if FFmpeg is installed
+echo Checking if FFmpeg is installed...
+where ffmpeg >nul 2>&1
+if %errorlevel% neq 0 (
+    echo FFmpeg is not installed.
+    echo Please install FFmpeg from https://phoenixnap.com/kb/ffmpeg-windows
+    echo CTRL+Click to follow link
+    pause
+    exit /b
+)
+echo FFmpeg is already installed.
+
 :: Check if Python is installed
 
 echo Checking if Python is installed...

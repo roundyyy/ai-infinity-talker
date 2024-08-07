@@ -296,18 +296,18 @@ class OllamaTextGenerator:
             await self.process_initial_text(initial_text)
 
     def start_generation(self):
-        self.language = self.language_var.get().split(" ")[-1][
-            1:-1
-        ]  # Get the selected language code
+        self.language = self.language_var.get().split(" ")[-1][1:-1]  # Get the selected language code
         self.ollama_model = self.model_var.get()  # Get the selected Ollama model
-        self.audio_stream.language = (
-            self.language
-        )  # Update language for TextToAudioStream
+        self.audio_stream.language = self.language  # Update language for TextToAudioStream
         asyncio.run_coroutine_threadsafe(self.start_generation_async(), self.loop)
 
     def stop_generation(self):
         self.running = False
         self.audio_stream.stop()
+        self.output_text.delete("1.0", tk.END)  # Clear the output text
+        self.input_text.delete("1.0", tk.END)  # Clear the input text
+        while not self.text_queue.empty():  # Clear the text queue
+            self.text_queue.get_nowait()
 
     async def process_initial_text(self, initial_text):
         # Generate first text from Llama
