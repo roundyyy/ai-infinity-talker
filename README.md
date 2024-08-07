@@ -8,8 +8,6 @@ Watch the demo video on YouTube:
 
 [![AI Infinite Talker Demo YouTube](https://img.youtube.com/vi/EmUcYtgWkIY/hqdefault.jpg)](https://youtu.be/EmUcYtgWkIY)
 
-
-
 ## Features
 
 - **Infinity Text Generation**: Generates continuous text based on initial input and predefined styles.
@@ -19,36 +17,21 @@ Watch the demo video on YouTube:
 
 ## Installation
 
-### Prerequisites
-
-- **NVIDIA GPU**: Required. A 8GB GPU should work, but an 12GB GPU is recommended for best results. Trust us, you don't want your AI buddy running out of breath!
-- **Ollama**: Must be installed manually. [Ollama Installation Guide](https://ollama.com/download/windows)
-
 ### Steps
 
-#### Option 1: Clone the Repository (for experienced users)
+1. **Install Prerequisites**:
+    - **NVIDIA GPU**: Required. A 8GB GPU should work, but a 12GB GPU is recommended for best results. Trust us, you don't want your AI buddy running out of breath!
+    - **Ollama**: Must be installed manually. [Ollama Installation Guide](https://ollama.com/download/windows)
+    - **FFmpeg**: Must be installed manually. [FFmpeg Installation Guide](https://phoenixnap.com/kb/ffmpeg-windows)
 
-1. **Clone the Repository**:
-    ```bash
-    git clone https://github.com/roundyyy/ai-infinity-talker.git
-    cd ai-infinity-talker
-    ```
-
-2. **Run the Installation Script**:
-    - On Windows:
-        Double-click `start.bat`. This script will install all the required dependencies listed in `requirements.txt`.
-
-#### Option 2: Download as Zip (for beginners)
-
-1. **Download the Project**:
-   
+2. **Download the Project** (for beginners):
     - Click the green "Code" button and select "Download ZIP".
 
-2. **Unpack the ZIP File**:
+3. **Unpack the ZIP File**:
     - Locate the downloaded ZIP file on your computer (usually in your Downloads folder).
     - Right-click the file and select "Extract All..." or "Unzip Here".
 
-3. **Run the Installation Script**:
+4. **Run the Installation Script**:
     - Open the extracted folder.
     - Double-click `start.bat`. This will automatically install all required dependencies and start the application.
 
@@ -72,7 +55,7 @@ Watch the demo video on YouTube:
 
 ## Credits
 
-This project uses the following libraries,tools and models:
+This project uses the following libraries, tools, and models:
 
 - [ttkbootstrap](https://github.com/israel-dryer/ttkbootstrap)
 - [httpx](https://www.python-httpx.org/)
@@ -85,4 +68,3 @@ This project uses the following libraries,tools and models:
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
