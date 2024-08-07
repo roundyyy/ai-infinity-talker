@@ -15,7 +15,7 @@ Watch the demo video on YouTube:
 - **Style Options**: Allows users to customize the style of the generated text with various options like sarcasm, humor, scientific, philosophical, etc.
 - **Real-time Updates**: The application continuously updates the text and audio in real-time.
 
-## Installation
+## Installation (Windows only)
 
 ### Steps
 
