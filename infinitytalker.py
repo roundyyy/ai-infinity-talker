@@ -18,8 +18,8 @@ import requests
 class OllamaTextGenerator:
     def __init__(self, master):
         self.master = master
-        self.master.title("INFINITY TALKER v0.1")
-        self.master.geometry("1280x1100")  # Adjusted from 1200x800 to 900x800
+        self.master.title("INFINITY TALKER v0.3")
+        self.master.geometry("1280x1200")  # Adjusted from 1200x800 to 900x800
 
         self.running = False
         self.next_text = None
@@ -194,6 +194,26 @@ class OllamaTextGenerator:
         )
         language_menu.pack(fill=tk.X, padx=5, pady=5)
 
+        # Voice selection frame
+        voice_frame = ttk.LabelFrame(control_frame, text="Voice Selection", padding=5)
+        voice_frame.pack(fill=tk.BOTH, padx=5, pady=5)
+
+        # Get available voices
+        self.available_voices = self.get_available_voices()
+
+        # Voice selection dropdown
+        self.voice_var = tk.StringVar()
+        if self.available_voices:
+            self.voice_var.set(self.available_voices[0])  # Set default voice
+
+        voice_label = ttk.Label(voice_frame, text="Select Voice:")
+        voice_label.pack(anchor="w", padx=5, pady=2)
+
+        voice_menu = ttk.OptionMenu(
+            voice_frame, self.voice_var, self.voice_var.get(), *self.available_voices
+        )
+        voice_menu.pack(fill=tk.X, padx=5, pady=5)
+
         # Ollama model selection frame
         model_frame = ttk.LabelFrame(
             control_frame, text="Ollama Model Options", padding=5
@@ -286,6 +306,18 @@ class OllamaTextGenerator:
             print(f"Error fetching Ollama models: {e}")
             return []
 
+    def get_available_voices(self):
+        try:
+            tts_engine = CoquiEngine()
+            available_voices = [voice.name for voice in tts_engine.get_voices()]
+            print("Available Voices:")
+            for voice in available_voices:
+                print(f"- {voice}")
+            return available_voices
+        except Exception as e:
+            print(f"Error fetching voices: {e}")
+            return []
+
     def download_more_models(self):
         webbrowser.open("https://ollama.com/library")
 
@@ -296,9 +328,13 @@ class OllamaTextGenerator:
             await self.process_initial_text(initial_text)
 
     def start_generation(self):
-        self.language = self.language_var.get().split(" ")[-1][1:-1]  # Get the selected language code
+        self.language = self.language_var.get().split(" ")[-1][
+            1:-1
+        ]  # Get the selected language code
         self.ollama_model = self.model_var.get()  # Get the selected Ollama model
-        self.audio_stream.language = self.language  # Update language for TextToAudioStream
+        self.audio_stream.language = (
+            self.language
+        )  # Update language for TextToAudioStream
         asyncio.run_coroutine_threadsafe(self.start_generation_async(), self.loop)
 
     def stop_generation(self):
@@ -325,6 +361,8 @@ class OllamaTextGenerator:
     def generate_audio_and_play(self, text):
         if self.running:
             self.is_playing = True
+            # Set the selected voice before feeding text
+            self.tts_engine.set_voice(self.voice_var.get())
             self.audio_stream.feed(text)
             self.audio_stream.play_async(
                 language=self.language
@@ -359,7 +397,7 @@ class OllamaTextGenerator:
     async def call_llama_api(self, text):
         active_styles = self.get_active_style_options()
         style_instruction = ", ".join(active_styles)
-        prompt = f"Continue the following text logically for 100 words in {self.language} language ({style_instruction}):\n\n{text}"
+        prompt = f"Continue the following text logically for 1000 words in {self.language} language in following styles ({style_instruction}):\n\n{text}"
         async with httpx.AsyncClient() as client:
             try:
                 response = await client.post(
